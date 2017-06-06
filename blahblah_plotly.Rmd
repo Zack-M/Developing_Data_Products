@@ -1,0 +1,10 @@
+## Using plotly to create geocoded interactive maps
+
+## Choropleth Maps: Mapping
+
+```{r, eval=FALSE}
+plot_ly(z = ~state_pop$Pop, text = ~state_pop$hover, locations = ~state_pop$State, 
+        type = 'choropleth', locationmode = 'USA-states', 
+        color = state_pop$Pop, colors = 'Blues', marker = list(line = borders)) %>%
+  layout(title = 'US Population in 1975', geo = map_options)
+```
